@@ -17,6 +17,14 @@ namespace GenericListAssignment {
                 var friend = friends[phone];
                 Console.WriteLine($"{friend.Phone} : {friend.Name}");
             }
+            var becca = new Friend { Name = "Becca", Email = "Shesmells@gmail.com", BFF = false, Phone = 321 };
+            var tigger = new Friend { Name = "tigger", Email = "nobodyknowsimacat@gamil.com", BFF = false, Phone = 513 };
+            friends.Add(becca.Phone, becca);
+            friends.Add(tigger.Phone, tigger);
+            foreach (var phone in friends.Keys) {
+                var friend = friends[phone];
+                Console.WriteLine($"{friend.Phone} : {friend.Name}");
+            }
         }
     }
 }
@@ -29,7 +37,7 @@ namespace GenericListAssignment {
 //namespace GenericListAssignment {
 //    class Program {
 //        static void Main(string[] args) {
-//            var freinds = new List<Freinds>(3);
+//            var freinds = new List<Freinds>(3); // Freinds is in caps becasue it's calling on the class.
 
 //            var ray = new Freinds { Name = "Ray", Email = "Ray@gmail.com", BFF = true };
 //            freinds.Add(ray);
